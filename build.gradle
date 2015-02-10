@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.13.3'
+        classpath 'com.android.tools.build:gradle:1.0.0'
     }
 }
 apply plugin: 'com.android.application'
@@ -26,7 +26,7 @@ android {
     defaultConfig {
         minSdkVersion 10
         targetSdkVersion 20
-        applicationId "de.danoeh.antennapodsp.custom"
+        applicationId "de.danoeh.antennapodsp.alyt"
         testApplicationId "de.test.antennapod"
         testInstrumentationRunner "instrumentationTest.de.test.antennapod.AntennaPodTestRunner"
     }
@@ -74,7 +74,7 @@ android {
             applicationIdSuffix ".debug"
         }
         release {
-            runProguard true
+            minifyEnabled true
             proguardFile 'proguard.cfg'
             signingConfig signingConfigs.releaseConfig
         }
