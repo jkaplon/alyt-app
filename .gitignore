@@ -1,0 +1,45 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+target/
+build/
+out.map
+
+# Local configuration file (sdk path, etc)
+local.properties
+gradle.properties
+.gradle
+build.xml
+
+# Backup files
+*~
+
+#eclipse project files
+.metadata
+.settings
+#IntelliJ project files
+.idea
+*.iml
+gen-external-apklibs
+out
+#transifex downloads
+changelog
+description
+
+# other
+*.odg#
+proguard
+*.DS_Store
+gradle.properties
+dep/AndroidSlidingUpPanel/library/libs
+*.keystore

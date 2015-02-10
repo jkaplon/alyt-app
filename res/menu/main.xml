@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/all_feed_refresh"
+        android:title="@string/refresh_label"
+        android:icon="?attr/navigation_refresh"
+        custom:showAsAction="ifRoom|collapseActionView">
+    </item>
+    <item
+        android:id="@+id/about_item"
+        android:title="@string/about_label"
+        custom:showAsAction="collapseActionView"/>
+</menu>

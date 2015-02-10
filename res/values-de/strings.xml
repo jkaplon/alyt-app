@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation"
+    >
+
+    <!-- Activitiy titles -->
+    <string name="app_name">Einschlafen Podcast</string>
+    <string name="init_label">Initialisiere</string>
+    <string name="downloads_label">Downloads</string>
+    <string name="cancel_download_label">Download abbrechen</string>
+    <string name="about_label">Über</string>
+
+    <!-- Webview actions -->
+    <string name="open_in_browser_label">Im Browser öffnen</string>
+    <string name="copy_url_label">URL kopieren</string>
+    <string name="share_url_label">URL teilen</string>
+    <string name="copied_url_msg">URL wurde in die Zwischenablage kopiert</string>
+
+    <!-- Other -->
+    <string name="confirm_label">Bestätigen</string>
+    <string name="cancel_label">Abbrechen</string>
+    <string name="author_label">Autor</string>
+    <string name="language_label">Sprache</string>
+    <string name="podcast_settings_label">Einstellungen</string>
+    <string name="cover_label">Bild</string>
+    <string name="error_label">Fehler</string>
+    <string name="error_msg_prefix">Ein Fehler ist aufgetreten:</string>
+    <string name="refresh_label">Aktualisieren</string>
+    <string name="external_storage_error_msg">Der externe Speicher ist nicht verfügbar. Bitte stelle sicher, dass das externe Speichermedium eingelegt ist, damit die Anwendung funktioniert.</string>
+    <string name="chapters_label">Kapitel</string>
+    <string name="shownotes_label">Sendungsnotizen</string>
+    <string name="description_label">Beschreibung</string>
+    <string name="most_recent_prefix">Letzte Episode:\u0020</string>
+    <string name="episodes_suffix">\u0020Episoden</string>
+    <string name="published_prefix">Veröffentlicht:\u0020</string>
+    <string name="length_prefix">Länge:\u0020</string>
+    <string name="size_prefix">Größe:\u0020</string>
+    <string name="processing_label">Verarbeite</string>
+    <string name="loading_label">Lade...</string>
+    <string name="image_of_prefix">Bild von:\u0020</string>
+    <string name="save_username_password_label">Benutzername und Passwort speichern</string>
+    <string name="close_label">Schließen</string>
+    <string name="retry_label">Erneut versuchen</string>
+
+    <!-- Actions on feeds -->
+    <string name="share_link_label">Webseiten-Link teilenk</string>
+    <string name="share_source_label">Feed-Link teilen</string>
+
+    <!-- actions on feeditems -->
+    <string name="download_label">Download</string>
+    <string name="play_label">Abspielen</string>
+    <string name="pause_label">Pause</string>
+    <string name="stream_label">Streamen</string>
+    <string name="remove_label">Entfernen</string>
+    <string name="remove_from_queue_label">Aus der Abspielliste entfernen</string>
+    <string name="visit_website_label">Webseite besuchen</string>
+
+    <!--Download messages and labels-->
+    <string name="download_successful">Download erfolgreich</string>
+    <string name="download_failed">Herunterladen fehlgeschlagen</string>
+    <string name="download_pending">Download anstehend</string>
+    <string name="download_running">Download läuft</string>
+    <string name="download_error_device_not_found">Speichermedium nicht gefunden</string>
+    <string name="download_error_insufficient_space">Zu wenig Speicherplatz</string>
+    <string name="download_error_file_error">Dateifehler</string>
+    <string name="download_error_http_data_error">HTTP Datenfehler</string>
+    <string name="download_error_error_unknown">Unbekannter Fehler</string>
+    <string name="download_error_parser_exception">Parserfehler</string>
+    <string name="download_error_unsupported_type">Nicht unterstützter Feed-Typ</string>
+    <string name="download_error_connection_error">Verbindungsfehler</string>
+    <string name="download_error_unknown_host">Unbekannter Host</string>
+    <string name="cancel_all_downloads_label">Alle Downloads abbrechen</string>
+    <string name="download_cancelled_msg">Download abgebrochen</string>
+    <string name="download_report_title">Download abgeschlossen</string>
+    <string name="download_error_malformed_url">Fehler in URL</string>
+    <string name="download_error_io_error">IO Error</string>
+    <string name="download_error_request_error">Anfragefehler</string>
+    <string name="download_error_db_access">Datenbankzugriffsfehler</string>
+    <string name="downloads_left">\u0020Downloads übrig</string>
+    <string name="download_notification_title">Lade Podcast-Daten</string>
+    <string name="download_report_content">%1$d Downloads erfolgreich, %2$d fehlgeschlagen</string>
+    <string name="download_log_title_unknown">Unbekannter Titel</string>
+    <string name="download_type_feed">Feed</string>
+    <string name="download_type_media">Mediendatei</string>
+    <string name="download_type_image">Bild</string>
+    <string name="download_request_error_dialog_message_prefix">Beim Herunterladen der Datei ist ein Fehler aufgetreten:\u0020</string>
+    <!--Mediaplayer messages-->
+    <string name="player_error_msg">Fehler!</string>
+    <string name="player_stopped_msg">Keine Medienwiedergabe</string>
+    <string name="player_preparing_msg">Bereite vor</string>
+    <string name="player_ready_msg">Fertig</string>
+    <string name="player_seeking_msg">Spule</string>
+    <string name="playback_error_server_died">Server ist offline</string>
+    <string name="playback_error_unknown">Unbekannter Fehler</string>
+    <string name="no_media_playing_label">Keine Medienwiedergabe</string>
+    <string name="position_default_label">00:00:00</string>
+    <string name="player_buffering_msg">Puffert</string>
+    <string name="playbackservice_notification_title">Spiele Podcast ab</string>
+    <string name="playbackservice_notification_content">Tippe hier für weitere Informationen</string>
+
+
+    <!--Sleep timer-->
+    <string name="set_sleeptimer_label">Schlummerfunktion</string>
+    <string name="disable_sleeptimer_label">Schlummerfunktion deaktivieren</string>
+    <string name="enter_time_here_label">Zeit eingeben</string>
+    <string name="sleep_timer_label">Schlummerfunktion</string>
+    <string name="time_left_label">Zeit übrig:\u0020</string>
+    <string name="time_dialog_invalid_input">Ungültige Eingabe, Zeit muss eine Ganzzahl sein</string>
+
+
+    <!--Content descriptions for image buttons-->
+    <string name="show_chapters_label">Kapitel anzeigen</string>
+    <string name="show_shownotes_label">Sendungsnotizen anzeigen</string>
+    <string name="show_cover_label">Bild anzeigen</string>
+    <string name="rewind_label">Zurückspulen</string>
+    <string name="fast_forward_label">Vorspulen</string>
+    <string name="sleep_label">Einschlafen</string>
+    <string name="media_type_audio_label">Audio</string>
+    <string name="media_type_video_label">Video</string>
+    <string name="navigate_upwards_label">Nach oben navigieren</string>
+    <string name="butAction_label">Mehr Aktionen</string>
+    <string name="status_playing_label">Episode wird gerade abgespielt</string>
+    <string name="status_downloading_label">Episode wird gerade heruntergeladen</string>
+    <string name="status_downloaded_label">Episode ist heruntergeladen</string>
+    <string name="status_unread_label">Eintrag ist neu</string>
+    <string name="in_queue_label">Episode befindet sich inder Abspielliste</string>
+    <string name="new_episodes_count_label">Anzahl neuer Episoden</string>
+    <string name="in_progress_episodes_count_label">Anzahl der Episoden, die du angefangen hast zu hören</string>
+
+
+    <!-- App initializer -->
+    <string name="storage_access_failed">Speicherzugriff fehlgeschlagen</string>
+    <string name="init_error_label">Initialisierungsfehler</string>
+    <string name="init_error_msg_prefix">Ein Fehler ist bei der Initialisierung aufgetreten</string>
+    <string name="init_error_detail">Stelle sicher, dass das Gerät mit dem Internet verbunden ist oder versuche es später noch einmal.</string>
+    <string name="try_again_label">Erneut versuchen</string>
+
+
+    <string name="episode_dialog_downloading_msg">Diese Episode wird gerade heruntergeladen.</string>
+    <string name="episode_dialog_not_downloaded_msg">Diese Episode wurde noch nicht heruntergeladen</string>
+    <string name="episode_dialog_stream">Sofort abspielen</string>
+
+
+    <!-- SPA-Util strings -->
+    <string name="spa_ask_installation_dialog_title">Du magst Podcasts?</string>
+    <string name="spa_ask_installation_dialog_msg">Du hast mehrere Apps installiert, um Podcasts anzuhören. Du kannst auch alle diese Podcasts in einer universellen App kostenlos abonnieren und hören, damit Du nicht so viele verschiedene Apps hast. Diese Apps heißen Podcatcher, wir empfehlen AntennaPod.</string>
+    <string name="spa_ask_installation_dialog_accept">AntennaPod anzeigen</string>
+    <string name="spa_ask_installation_dialog_deny">Nein danke, lass mal.</string>
+
+</resources>
