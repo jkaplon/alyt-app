@@ -28,8 +28,12 @@ public class HttpDownloader extends Downloader {
 
     private URI getURIFromRequestUrl(String source) {
         try {
-            URL url = new URL(source);
-            return new URI(url.getProtocol(), url.getUserInfo(), url.getHost(), url.getPort(), url.getPath(), url.getQuery(), url.getRef());
+            // Single-string URI constructor DE-codes original URL.
+            // Convert URI back to URL (seems silly, but easier than mapping orig url.methods to URI methods.
+            // Switch to uri.getPath() for return statement so de-coded path gets encoded (and not encoded path getting double-encoded).
+            URI uri = new URI(source);
+            URL url = uri.toURL();
+            return new URI(url.getProtocol(), url.getUserInfo(), url.getHost(), url.getPort(), uri.getPath(), url.getQuery(), url.getRef());
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException(e);
         } catch (URISyntaxException e) {
