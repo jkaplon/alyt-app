@@ -5,7 +5,7 @@
     >
 
     <!-- Activitiy titles -->
-    <string name="app_name">Einschlafen Podcast</string>
+    <string name="app_name">At Least You\'re Trying Podcast</string>
     <string name="init_label">Initializing</string>
     <string name="downloads_label">Downloads</string>
     <string name="cancel_download_label">Cancel Download</string>
