@@ -43,3 +43,4 @@ proguard
 gradle.properties
 dep/AndroidSlidingUpPanel/library/libs
 *.keystore
+manifest-merger-release-report.txt
