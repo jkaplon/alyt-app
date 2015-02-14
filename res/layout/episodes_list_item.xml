@@ -5,13 +5,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <ImageView
+    <TextView
         android:id="@+id/imgvImage"
         android:contentDescription="@string/cover_label"
         android:layout_width="@dimen/thumbnail_length_itemlist"
         android:layout_height="@dimen/thumbnail_length_itemlist"
         android:layout_alignParentLeft="true"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:gravity="center"
+        android:text="999"
+        style="@style/TextAppearance.AppCompat.Base.Widget.PopupMenu.Large" />
 
     <ImageView
         android:id="@+id/statusPlaying"
