@@ -14,7 +14,8 @@
         android:scaleType="centerCrop"
         android:gravity="center"
         android:text="999"
-        style="@style/TextAppearance.AppCompat.Base.Widget.PopupMenu.Large" />
+        android:textStyle="bold"
+        android:textSize="26dp" />
 
     <ImageView
         android:id="@+id/statusPlaying"
