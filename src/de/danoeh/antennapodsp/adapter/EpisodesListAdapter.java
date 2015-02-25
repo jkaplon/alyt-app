@@ -69,7 +69,7 @@ public class EpisodesListAdapter extends BaseAdapter {
                     .findViewById(R.id.statusPlaying);
             holder.downloadProgress = (ProgressBar) convertView
                     .findViewById(R.id.pbar_download_progress);
-            holder.imageView = (ImageView) convertView.findViewById(R.id.imgvImage);
+            holder.episodeNum = (TextView) convertView.findViewById(R.id.imgvImage);
             holder.txtvDuration = (TextView) convertView.findViewById(R.id.txtvDuration);
             convertView.setTag(holder);
         } else {
@@ -133,11 +133,9 @@ public class EpisodesListAdapter extends BaseAdapter {
             holder.downloadStatus.setVisibility(View.INVISIBLE);
         }
 
-        ImageLoader.getInstance().loadThumbnailBitmap(
-                item,
-                holder.imageView,
-                (int) convertView.getResources().getDimension(
-                        R.dimen.thumbnail_length));
+        // Parse episode number out of title; this is brittle, but is the only consistent value in feed.
+        // Couldn't use <link> values since some are gtradio.net URL's and others point to archive.org.
+        holder.episodeNum.setText(item.getTitle().substring(23, item.getTitle().indexOf(':')));
         return convertView;
 
     }
@@ -146,7 +144,8 @@ public class EpisodesListAdapter extends BaseAdapter {
         TextView title;
         TextView pubDate;
         ImageView downloadStatus;
-        ImageView imageView;
+        //ImageView imageView;
+        TextView episodeNum;
         ImageView statusPlaying;
         ProgressBar downloadProgress;
         TextView txtvDuration;

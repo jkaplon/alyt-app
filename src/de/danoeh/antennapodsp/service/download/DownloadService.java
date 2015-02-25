@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.media.MediaMetadataRetriever;
 import android.os.Binder;
 import android.os.Handler;
@@ -19,8 +18,6 @@ import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.webkit.URLUtil;
-import android.widget.ImageView;
-
 import de.danoeh.antennapodsp.AppConfig;
 import de.danoeh.antennapodsp.R;
 import de.danoeh.antennapodsp.activity.MainActivity;
@@ -45,7 +42,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Manages the download of feedfiles in the app. Downloads can be enqueued via the startService intent.
+ * Manages the download of feedfiles in the app. Downloads can be enqueued viathe startService intent.
  * The argument of the intent is an instance of DownloadRequest in the EXTRA_REQUEST field of
  * the intent.
  * After the downloads have finished, the downloaded object will be passed on to a specific handler, depending on the
@@ -582,31 +579,28 @@ public class DownloadService extends Service {
                         );
                     }
                 }
-
-                for (FeedItem item : savedFeed.getItems()) {
-                    if (StringUtils.contains(item.getImage().getDownload_url(), "kaplon.us/alyt.jpg")) {
-                        // If episode image is default http://kaplons.us/alyt.jpg, use cached feed image instead.
-                        item.setImage(savedFeed.getImage());
-                        // TODO: set item.getImage().isDownloaded() to true.
-                    } else if (item.isItemImage() && (!item.getImage().isDownloaded())) {
-                        if (AppConfig.DEBUG)
-                            Log.d(TAG, "Item has image; Downloading....");
-                        try {
-                            requester.downloadImage(DownloadService.this,
-                                    item.getImage());
-                        } catch (DownloadRequestException e) {
-                            e.printStackTrace();
-                            DBWriter.addDownloadStatus(
-                                    DownloadService.this,
-                                    new DownloadStatus(
-                                            item.getImage(),
-                                            item
-                                                    .getImage()
-                                                    .getHumanReadableIdentifier(),
-                                            DownloadError.ERROR_REQUEST_ERROR,
-                                            false, e.getMessage()
-                                    )
-                            );
+                if (!hasDuplicateImages(savedFeed)) {
+                    for (FeedItem item : savedFeed.getItems()) {
+                        if (item.isItemImage() && (!item.getImage().isDownloaded())) {
+                            if (AppConfig.DEBUG)
+                                Log.d(TAG, "Item has image; Downloading....");
+                            try {
+                                requester.downloadImage(DownloadService.this,
+                                        item.getImage());
+                            } catch (DownloadRequestException e) {
+                                e.printStackTrace();
+                                DBWriter.addDownloadStatus(
+                                        DownloadService.this,
+                                        new DownloadStatus(
+                                                item.getImage(),
+                                                item
+                                                        .getImage()
+                                                        .getHumanReadableIdentifier(),
+                                                DownloadError.ERROR_REQUEST_ERROR,
+                                                false, e.getMessage()
+                                        )
+                                );
+                            }
                         }
                     }
                 }
@@ -667,6 +661,25 @@ public class DownloadService extends Service {
                 Log.d(TAG, "Feed appears to be valid.");
             return true;
 
+        }
+
+        /**
+         * Checks if the FeedItems of this feed have images that point
+         * to the same URL.
+         */
+        private boolean hasDuplicateImages(Feed feed) {
+            for (int x = 0; x < feed.getItems().size(); x++) {
+                for (int y = x + 1; y < feed.getItems().size(); y++) {
+                    FeedItem item1 = feed.getItems().get(x);
+                    FeedItem item2 = feed.getItems().get(y);
+                    if (item1.isItemImage() && item2.isItemImage()) {
+                        if (StringUtils.equals(item1.getImage().getDownload_url(), item2.getImage().getDownload_url())) {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
         }
 
         private boolean hasValidFeedItems(Feed feed) {
