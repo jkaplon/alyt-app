@@ -16,5 +16,16 @@ At Least You're Trying Podcast
 ### Short Description
 Two friends and the conversations that had gone missing from their lives.
 
-### Full Description
-Ever want to be a part of a larger, but ultimately ineffectual, community? The two hosts of the At Least You're Trying Podcast along with dozens of other "Tryers" are waiting with open internet arms.
+### Full Description (no more markdown here)
+This app is an easy way to become a listener of the At Least You're Trying Podcast, http://gtradio.net/alyt.
+Once the app is installed, you're able to download and listen to any episode.
+The episode listing will update as new episodes are (sporadically) released.
+
+Interact with Jody, Matt, and rest of the "Tryers":
+- Website, http://gtradio.net/alyt
+- Facebook, https://www.facebook.com/AtLeastYoureTrying
+- Email, alyt.show@gmail.com
+
+If you're familiar with the greater podcast universe, then you can subscribe using your client of choice:
+- iTunes, https://itunes.apple.com/us/podcast/at-least-youre-trying/id702153446?mt=2&ign-mpt=uo%3D4
+- RSS, http://kaplon.us/alytfeed.xml
