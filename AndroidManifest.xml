@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="de.danoeh.antennapodsp"
-          android:versionCode="5"
+          android:versionCode="7"
           android:versionName="1.0.1">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -41,7 +41,8 @@
         <activity
             android:name=".activity.InitActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Splash">
+            android:theme="@style/Theme.Splash"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -75,7 +76,8 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.FeedUpdateReceiver">
+        <receiver android:name=".receiver.FeedUpdateReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="de.danoeh.antennapod.feedupdatereceiver.refreshFeeds"/>
             </intent-filter>
@@ -86,13 +88,15 @@
             android:label="@string/about_label">
         </activity>
 
-        <receiver android:name=".receiver.ConnectivityActionReceiver">
+        <receiver android:name=".receiver.ConnectivityActionReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.AlarmUpdateReceiver">
+        <receiver android:name=".receiver.AlarmUpdateReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
@@ -105,7 +109,8 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.SPAReceiver">
+        <receiver android:name=".receiver.SPAReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
                 <data
